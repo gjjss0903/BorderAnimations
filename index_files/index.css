@@ -1,0 +1,55 @@
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.gnb {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  padding: 50px 30px;
+}
+
+.gnb li {
+  flex: 1;
+  text-align: center;
+}
+.gnb li a {
+  font-size: 14px;
+  position: relative;
+}
+
+.gnb li a:before {
+  content: '';
+  position: absolute;
+  background-color: red;
+  height: 2px;
+  width: 0;
+  bottom: -5px;
+  transition: 0.5s;
+  left: 50%;
+  transform: translateX(-50%);
+  /* right: 0; (오른쪽에서 왼쪽) */
+  /* 보더가 늘어나는게 아니라 백그라운드가 늘어남 */
+}
+
+.gnb li a:hover::before {
+  width: 100%;
+}
